@@ -13,9 +13,15 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 
+
     @RequestMapping(value="/greeting")
     public String sayHello() {
         return "Hello from spring boot";
+    }
+
+    @RequestMapping(value = "/")
+    public String home() {
+        return "Hello. This is a demo project.";
     }
 }
 
